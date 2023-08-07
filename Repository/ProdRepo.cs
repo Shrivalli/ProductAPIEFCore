@@ -17,10 +17,22 @@ namespace ProductAPIEFCore.Repository
             db = _db;
         }
 
-        public  void AddNewProduct(Product p)
+        public  string AddNewProduct(Product p)
         {
-          db.Products.Add(p);
-             db.SaveChanges();
+            string message;
+            if (p != null)
+            {
+                db.Products.Add(p);
+                db.SaveChanges();
+                message = "Record Added";
+                return message;
+            }
+            else
+            {
+                message = "Error";
+                return message;
+            }
+
         }
 
         public  Product DeleteProduct(int  id)

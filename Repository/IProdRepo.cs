@@ -8,7 +8,7 @@ namespace ProductAPIEFCore.Repository
 
         bool check(int a);
        List<Product> GetAllProducts();
-        void AddNewProduct(Product p);
+      string AddNewProduct(Product p);
         Product DeleteProduct(int  id);
         Task<Product> GetProductById(int id);
         Task UpdateProduct(int id,Product p);

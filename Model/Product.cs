@@ -15,5 +15,15 @@ public partial class Product
 
     public DateTime? Dom { get; set; }
 
+    public Product() { }
+
+    public Product(int Pid,string Pname,int Price)
+    {
+        this.Pid = Pid;
+        this.Pname = Pname;
+        this.Price = Price;    
+
+    }
+
     
 }

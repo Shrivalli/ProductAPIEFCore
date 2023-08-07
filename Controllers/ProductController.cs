@@ -29,7 +29,7 @@ namespace ProductAPIEFCore.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<Product>> GetAllProducts()
+        public ActionResult GetAllProducts()
         {
             LogError("Get All products is called");
             List<Product> products = prodrepo.GetAllProducts();
